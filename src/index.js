@@ -13,17 +13,15 @@ class Toogle extends Component {
     })
   }
   render () {
-    let className = 'toogle'
-    if (this.props.className) {
-      className += ` ${this.props.className}`
-    }
+    const class_name = this.props.className || 'toogle'
+    let wrapper_class = class_name
     if (this.state.checked) {
-      className += ' toogle--checked'
+      wrapper_class += ` ${class_name}--checked`
     }
-    return <div className={className}>
-      <div className='toogle-left'></div>
-      <div className='toogle-center' onClick={this.handleClick.bind(this)}></div>
-      <div className='toogle-right'></div>
+    return <div className={wrapper_class}>
+      <div className={class_name + '__left'}></div>
+      <div className={class_name + '__center'} onClick={this.handleClick.bind(this)}></div>
+      <div className={class_name + '__right'}></div>
     </div>
   }
 }
