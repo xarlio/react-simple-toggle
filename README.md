@@ -1,6 +1,9 @@
 # react-toogle
 Simple React Toogle component
 
+## Demo
+[Live demo](https://carlos-dev.github.io/react-toogle)
+
 ## Getting Started
 ### Installation
 ## Usage
