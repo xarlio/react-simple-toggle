@@ -1,0 +1,39 @@
+.toogle{
+  width: 50px;
+  height: 28px;
+  display: flex;
+  position: relative;
+}
+.toogle-left{
+  margin: 5px;
+  background: #B1CECE;
+  border-radius: 15px 0 0 15px;
+  flex-grow: 1;
+  transition: all 100ms ease-in;
+}
+.toogle-right{
+  background: #BEBEBE;
+  margin: 5px;
+  border-radius: 0 15px 15px 0;
+  flex-grow: 2;
+  transition: all 100ms ease-in;
+}
+.toogle-center{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4FA9A9;
+  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);
+  position: absolute;
+  left: 0;
+  transition: left 100ms ease-in;
+}
+.toogle--checked .toogle-left{
+  flex-grow: 2;
+}
+.toogle--checked .toogle-right{
+  flex-grow: 1;
+}
+.toogle--checked .toogle-center{
+  left: 20px;
+}
