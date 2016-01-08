@@ -4,7 +4,8 @@
   "description": "React Toogle demo",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "webpack"
   },
   "author": "Carlos Sánchez",
   "devDependencies": {
