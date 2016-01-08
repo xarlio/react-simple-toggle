@@ -1,0 +1,19 @@
+{
+  "name": "react-toogle-demo",
+  "version": "1.0.0",
+  "description": "React Toogle demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "author": "Carlos Sánchez",
+  "devDependencies": {
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  }
+}
