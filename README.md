@@ -1,19 +1,19 @@
-# react-toggle
+# react-simple-toggle
 Simple React Toggle component
 
 ## Demo
-[Live demo](https://carlos-dev.github.io/react-toggle)
+[Live demo](https://carlos-dev.github.io/react-simple-toggle)
 
 ## Getting Started
 ### Installation
 ```
-npm install react-toggle --save
+npm install react-simple-toggle --save
 ```
 ## Usage
 ### Component
 ```javascript
 import React, { Component } from 'react';
-import { Toggle } from 'react-toggle';
+import { Toggle } from 'react-simple-toggle';
 
 class MyComponent extends Component {
 	handleChange(checked){
@@ -35,10 +35,10 @@ class MyComponent extends Component {
 ```
 ### Options
 | name | type | default value |
-| ---
-| className | string | 'toggle'
-| defaultValue | boolean | false
-| onChange | function | null
+| -----|------|---------------|
+| className | string | 'toggle' |
+| defaultValue | boolean | false |
+| onChange | function | null |
 
 ## Style
 The styling is completely separated from the component in order to make easy to integrate with the styling of your app. Create your css taking into account this tree:
@@ -53,8 +53,8 @@ Notes:
 - "toggle" can be replaced by className prop
 - toggle--checked is only present when is toggled
 
-However, you can use one of the stylesheets provided in [style folder](https://github.com/carlos-dev/react-toggle/tree/master/style)
+However, you can use one of the stylesheets provided in [style folder](https://github.com/carlos-dev/react-simple-toggle/tree/master/style)
 ```
-require('node_modules/react-toggle/style/android.css')
+require('node_modules/react-simple-toggle/style/android.css')
 ```
 more styles coming soon
