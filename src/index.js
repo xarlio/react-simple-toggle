@@ -8,9 +8,13 @@ class Toogle extends Component {
     }
   }
   handleClick () {
+    const new_state = !this.state.checked
     this.setState({
-      checked: !this.state.checked
+      checked: new_state
     })
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(new_state)
+    }
   }
   render () {
     const class_name = this.props.className || 'toogle'
@@ -27,7 +31,8 @@ class Toogle extends Component {
 }
 
 Toogle.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  onChange: PropTypes.func
 }
 
 export default Toogle

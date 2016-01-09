@@ -12,15 +12,15 @@ import React, { Component } from 'react';
 import { Toogle } from 'react-toogle';
 
 class MyComponent extends Component {
-	handleChange(value){
-		console.log(value);
+	handleChange(checked){
+		console.log(checked);
 	}
 
 	render(){
 		return (
 			<div>
 				<Toogle
-					onChange={this.handleSelect}
+					onChange={this.handleChange}
 				/>
 			</div>
 		)
