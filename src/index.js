@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class Toogle extends Component {
+class Toggle extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -17,7 +17,7 @@ class Toogle extends Component {
     }
   }
   render () {
-    const class_name = this.props.className || 'toogle'
+    const class_name = this.props.className || 'toggle'
     let wrapper_class = class_name
     if (this.state.checked) {
       wrapper_class += ` ${class_name}--checked`
@@ -30,10 +30,10 @@ class Toogle extends Component {
   }
 }
 
-Toogle.propTypes = {
+Toggle.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.bool,
   onChange: PropTypes.func
 }
 
-export default Toogle
+export default Toggle

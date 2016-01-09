@@ -1,24 +1,24 @@
-.toogle{
+.toggle{
   position: relative;
   display: flex;
   width: 50px;
   height: 28px;
 }
-.toogle__left, .toogle__right{
+.toggle__left, .toggle__right{
   margin: 5px;
   transition: all 100ms ease-in;
 }
-.toogle__left{
+.toggle__left{
   background: #B1CECE;
   border-radius: 15px 0 0 15px;
   flex-grow: 1;
 }
-.toogle__right{
+.toggle__right{
   background: #BEBEBE;
   border-radius: 0 15px 15px 0;
   flex-grow: 5;
 }
-.toogle__center{
+.toggle__center{
   position: absolute;
   left: 0;
   background: #4FA9A9;
@@ -28,12 +28,12 @@
   box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);
   transition: left 100ms ease-in;
 }
-.toogle--checked .toogle__left{
+.toggle--checked .toggle__left{
   flex-grow: 5;
 }
-.toogle--checked .toogle__right{
+.toggle--checked .toggle__right{
   flex-grow: 1;
 }
-.toogle--checked .toogle__center{
+.toggle--checked .toggle__center{
   left: 25px;
 }

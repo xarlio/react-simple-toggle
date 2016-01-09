@@ -1,9 +1,9 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var Toogle = require('../lib/index')
+var Toggle = require('../lib/index')
 require('../style/android.css')
 
 ReactDOM.render(
-  React.createElement(Toogle),
+  React.createElement(Toggle),
   document.getElementById('root')
 )

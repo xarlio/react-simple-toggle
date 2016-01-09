@@ -16,5 +16,5 @@ new WebpackDevServer(webpack(config), {
     console.log(err)
   }
 
-  console.log(`React Toogle demo listening at http://0.0.0.0:${port}`)
+  console.log(`React Toggle demo listening at http://0.0.0.0:${port}`)
 })
