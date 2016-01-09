@@ -3,6 +3,8 @@
 Simple React Toggle component
 
 ## Demo
+[![Toggle](toggle.png)](https://carlos-dev.github.io/react-simple-toggle)
+
 [Live demo](https://carlos-dev.github.io/react-simple-toggle)
 
 ## Getting Started
