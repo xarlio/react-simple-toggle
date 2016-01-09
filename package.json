@@ -1,5 +1,5 @@
 {
-  "name": "react-toggle",
+  "name": "react-simple-toggle",
   "version": "1.0.0",
   "description": "Simple React Toogle",
   "main": "lib/index.js",
@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carlos-dev/react-toggle.git"
+    "url": "git+https://github.com/carlos-dev/react-simple-toggle.git"
   },
   "author": "Carlos Sánchez",
   "bugs": {
-    "url": "https://github.com/carlos-dev/react-toggle/issues"
+    "url": "https://github.com/carlos-dev/react-simple-toggle/issues"
   },
-  "homepage": "https://github.com/carlos-dev/react-toggle#readme",
+  "homepage": "https://github.com/carlos-dev/react-simple-toggle#readme",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
