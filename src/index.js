@@ -4,13 +4,17 @@ class Toogle extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      checked: true
+      checked: props.defaultValue ? props.defaultValue : false
     }
   }
   handleClick () {
+    const new_state = !this.state.checked
     this.setState({
-      checked: !this.state.checked
+      checked: new_state
     })
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(new_state)
+    }
   }
   render () {
     const class_name = this.props.className || 'toogle'
@@ -27,7 +31,9 @@ class Toogle extends Component {
 }
 
 Toogle.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  defaultValue: PropTypes.bool,
+  onChange: PropTypes.func
 }
 
 export default Toogle
