@@ -35,10 +35,10 @@ class MyComponent extends Component {
 ```
 ### Options
 | name | type | default value |
-| ---
-| className | string | 'toggle'
-| defaultValue | boolean | false
-| onChange | function | null
+| -----|------|---------------|
+| className | string | 'toggle' |
+| defaultValue | boolean | false |
+| onChange | function | null |
 
 ## Style
 The styling is completely separated from the component in order to make easy to integrate with the styling of your app. Create your css taking into account this tree:
