@@ -1,7 +1,10 @@
 # react-simple-toggle
+[![npm version](https://img.shields.io/npm/v/react-simple-toggle.svg?style=flat)](https://www.npmjs.com/package/react-simple-toggle)
 Simple React Toggle component
 
 ## Demo
+[![Toggle](toggle.png)](https://carlos-dev.github.io/react-simple-toggle)
+
 [Live demo](https://carlos-dev.github.io/react-simple-toggle)
 
 ## Getting Started
