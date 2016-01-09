@@ -1,7 +1,7 @@
 {
-  "name": "react-toogle-demo",
+  "name": "react-toggle-demo",
   "version": "1.0.0",
-  "description": "React Toogle demo",
+  "description": "React Toggle demo",
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",

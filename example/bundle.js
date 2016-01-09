@@ -46,11 +46,11 @@
 
 	var React = __webpack_require__(1)
 	var ReactDOM = __webpack_require__(158)
-	var Toogle = __webpack_require__(159)
+	var Toggle = __webpack_require__(159)
 	__webpack_require__(316)
 
 	ReactDOM.render(
-	  React.createElement(Toogle),
+	  React.createElement(Toggle),
 	  document.getElementById('root')
 	)
 
@@ -19674,29 +19674,33 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var Toogle = (function (_Component) {
-	  _inherits(Toogle, _Component);
+	var Toggle = (function (_Component) {
+	  _inherits(Toggle, _Component);
 
-	  function Toogle(props) {
-	    _classCallCheck(this, Toogle);
+	  function Toggle(props) {
+	    _classCallCheck(this, Toggle);
 
-	    _get(Object.getPrototypeOf(Toogle.prototype), 'constructor', this).call(this, props);
+	    _get(Object.getPrototypeOf(Toggle.prototype), 'constructor', this).call(this, props);
 	    this.state = {
-	      checked: true
+	      checked: props.defaultValue ? props.defaultValue : false
 	    };
 	  }
 
-	  _createClass(Toogle, [{
+	  _createClass(Toggle, [{
 	    key: 'handleClick',
 	    value: function handleClick() {
+	      var new_state = !this.state.checked;
 	      this.setState({
-	        checked: !this.state.checked
+	        checked: new_state
 	      });
+	      if (typeof this.props.onChange === 'function') {
+	        this.props.onChange(new_state);
+	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var class_name = this.props.className || 'toogle';
+	      var class_name = this.props.className || 'toggle';
 	      var wrapper_class = class_name;
 	      if (this.state.checked) {
 	        wrapper_class += ' ' + class_name + '--checked';
@@ -19711,14 +19715,16 @@
 	    }
 	  }]);
 
-	  return Toogle;
+	  return Toggle;
 	})(_react.Component);
 
-	Toogle.propTypes = {
-	  className: _react.PropTypes.string
+	Toggle.propTypes = {
+	  className: _react.PropTypes.string,
+	  defaultValue: _react.PropTypes.bool,
+	  onChange: _react.PropTypes.func
 	};
 
-	exports['default'] = Toogle;
+	exports['default'] = Toggle;
 	module.exports = exports['default'];
 
 /***/ },
@@ -39245,7 +39251,7 @@
 
 
 	// module
-	exports.push([module.id, ".toogle{\n  position: relative;\n  display: flex;\n  width: 50px;\n  height: 28px;\n}\n.toogle__left, .toogle__right{\n  margin: 5px;\n  transition: all 100ms ease-in;\n}\n.toogle__left{\n  background: #B1CECE;\n  border-radius: 15px 0 0 15px;\n  flex-grow: 1;\n}\n.toogle__right{\n  background: #BEBEBE;\n  border-radius: 0 15px 15px 0;\n  flex-grow: 5;\n}\n.toogle__center{\n  position: absolute;\n  left: 0;\n  background: #4FA9A9;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);\n  transition: left 100ms ease-in;\n}\n.toogle--checked .toogle__left{\n  flex-grow: 5;\n}\n.toogle--checked .toogle__right{\n  flex-grow: 1;\n}\n.toogle--checked .toogle__center{\n  left: 25px;\n}\n", ""]);
+	exports.push([module.id, ".toggle{\n  position: relative;\n  display: flex;\n  width: 50px;\n  height: 28px;\n}\n.toggle__left, .toggle__right{\n  margin: 5px;\n  transition: all 100ms ease-in;\n}\n.toggle__left{\n  background: #B1CECE;\n  border-radius: 15px 0 0 15px;\n  flex-grow: 1;\n}\n.toggle__right{\n  background: #BEBEBE;\n  border-radius: 0 15px 15px 0;\n  flex-grow: 5;\n}\n.toggle__center{\n  position: absolute;\n  left: 0;\n  background: #4FA9A9;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);\n  transition: left 100ms ease-in;\n}\n.toggle--checked .toggle__left{\n  flex-grow: 5;\n}\n.toggle--checked .toggle__right{\n  flex-grow: 1;\n}\n.toggle--checked .toggle__center{\n  left: 25px;\n}\n", ""]);
 
 	// exports
 
