@@ -20,6 +20,7 @@ class MyComponent extends Component {
 		return (
 			<div>
 				<Toogle
+					defaultValue={true}
 					onChange={this.handleChange}
 				/>
 			</div>

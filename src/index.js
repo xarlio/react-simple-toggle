@@ -4,7 +4,7 @@ class Toogle extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      checked: true
+      checked: props.defaultValue ? props.defaultValue : false
     }
   }
   handleClick () {
@@ -32,6 +32,7 @@ class Toogle extends Component {
 
 Toogle.propTypes = {
   className: PropTypes.string,
+  defaultValue: PropTypes.bool,
   onChange: PropTypes.func
 }
 
