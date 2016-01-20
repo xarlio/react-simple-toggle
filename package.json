@@ -1,12 +1,13 @@
 {
   "name": "react-simple-toggle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple React Toogle",
   "main": "lib/index.js",
   "scripts": {
     "dev": "babel ./src --watch --out-dir ./lib",
     "clean": "rm -rf lib/*",
-    "build": "npm run clean; babel ./src --out-dir ./lib;"
+    "build": "npm run clean; babel ./src --out-dir ./lib;",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
