@@ -50,7 +50,10 @@
 	__webpack_require__(316)
 
 	ReactDOM.render(
-	  React.createElement(Toggle),
+	  React.createElement(Toggle, {
+	    checked: true,
+	    defaultValue: true
+	  }),
 	  document.getElementById('root')
 	)
 
@@ -19688,13 +19691,23 @@
 
 	  _createClass(Toggle, [{
 	    key: 'handleClick',
-	    value: function handleClick() {
+	    value: function handleClick(evt) {
+	      evt.preventDefault();
 	      var new_state = !this.state.checked;
 	      this.setState({
 	        checked: new_state
 	      });
 	      if (typeof this.props.onChange === 'function') {
 	        this.props.onChange(new_state);
+	      }
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if ('checked' in nextProps) {
+	        this.setState({
+	          checked: !!nextProps.checked
+	        });
 	      }
 	    }
 	  }, {
@@ -19709,7 +19722,10 @@
 	        'div',
 	        { className: wrapper_class },
 	        _react2['default'].createElement('div', { className: class_name + '__left' }),
-	        _react2['default'].createElement('div', { className: class_name + '__center', onClick: this.handleClick.bind(this) }),
+	        _react2['default'].createElement('div', { className: class_name + '__center',
+	          onClick: this.handleClick.bind(this),
+	          onTouchEnd: this.handleClick.bind(this)
+	        }),
 	        _react2['default'].createElement('div', { className: class_name + '__right' })
 	      );
 	    }

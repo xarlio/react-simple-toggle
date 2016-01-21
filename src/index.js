@@ -7,13 +7,21 @@ class Toggle extends Component {
       checked: props.defaultValue ? props.defaultValue : false
     }
   }
-  handleClick () {
+  handleClick (evt) {
+    evt.preventDefault()
     const new_state = !this.state.checked
     this.setState({
       checked: new_state
     })
     if (typeof this.props.onChange === 'function') {
       this.props.onChange(new_state)
+    }
+  }
+  componentWillReceiveProps (nextProps) {
+    if ('checked' in nextProps) {
+      this.setState({
+        checked: !!nextProps.checked
+      })
     }
   }
   render () {
@@ -24,7 +32,10 @@ class Toggle extends Component {
     }
     return <div className={wrapper_class}>
       <div className={class_name + '__left'}></div>
-      <div className={class_name + '__center'} onClick={this.handleClick.bind(this)}></div>
+      <div className={class_name + '__center'}
+        onClick={this.handleClick.bind(this)}
+        onTouchEnd={this.handleClick.bind(this)}
+      ></div>
       <div className={class_name + '__right'}></div>
     </div>
   }
