@@ -42,6 +42,7 @@ class MyComponent extends Component {
 | className | string | 'toggle' |
 | defaultValue | boolean | false |
 | onChange | function | null |
+| checked | boolean | null |
 
 ## Style
 The styling is completely separated from the component in order to make easy to integrate with the styling of your app. Create your css taking into account this tree:

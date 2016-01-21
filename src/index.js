@@ -17,6 +17,13 @@ class Toggle extends Component {
       this.props.onChange(new_state)
     }
   }
+  componentWillReceiveProps (nextProps) {
+    if ('checked' in nextProps) {
+      this.setState({
+        checked: !!nextProps.checked
+      })
+    }
+  }
   render () {
     const class_name = this.props.className || 'toggle'
     let wrapper_class = class_name
