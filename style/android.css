@@ -14,19 +14,23 @@
   flex-grow: 1;
 }
 .toggle__right{
-  background: #BEBEBE;
+  background: #939393;
   border-radius: 0 15px 15px 0;
   flex-grow: 5;
 }
 .toggle__center{
   position: absolute;
   left: 0;
-  background: #4FA9A9;
+  background: #F1F1F1;
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
   transition: left 100ms ease-in;
+}
+.toggle__center:active{
+  transition: box-shadow 150ms linear;
+  box-shadow: 0 0 0 19px rgba(80, 80, 80, 0.1);
 }
 .toggle--checked .toggle__left{
   flex-grow: 5;
@@ -35,5 +39,10 @@
   flex-grow: 1;
 }
 .toggle--checked .toggle__center{
+  background: #009688;
+  box-shadow: 0 0 0 0 rgba(0, 150, 136, 0.2), 0 1px 3px 1px rgba(0, 0, 0, 0.4);
   left: 25px;
+}
+.toggle--checked .toggle__center:active{
+  box-shadow: 0 0 0 19px rgba(0, 150, 136, 0.2);
 }
