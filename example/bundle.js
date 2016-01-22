@@ -50,10 +50,7 @@
 	__webpack_require__(316)
 
 	ReactDOM.render(
-	  React.createElement(Toggle, {
-	    checked: true,
-	    defaultValue: true
-	  }),
+	  React.createElement(Toggle),
 	  document.getElementById('root')
 	)
 
@@ -39267,7 +39264,7 @@
 
 
 	// module
-	exports.push([module.id, ".toggle{\n  position: relative;\n  display: flex;\n  width: 50px;\n  height: 28px;\n}\n.toggle__left, .toggle__right{\n  margin: 5px;\n  transition: all 100ms ease-in;\n}\n.toggle__left{\n  background: #B1CECE;\n  border-radius: 15px 0 0 15px;\n  flex-grow: 1;\n}\n.toggle__right{\n  background: #BEBEBE;\n  border-radius: 0 15px 15px 0;\n  flex-grow: 5;\n}\n.toggle__center{\n  position: absolute;\n  left: 0;\n  background: #4FA9A9;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05);\n  transition: left 100ms ease-in;\n}\n.toggle--checked .toggle__left{\n  flex-grow: 5;\n}\n.toggle--checked .toggle__right{\n  flex-grow: 1;\n}\n.toggle--checked .toggle__center{\n  left: 25px;\n}\n", ""]);
+	exports.push([module.id, ".toggle{\n  position: relative;\n  display: flex;\n  width: 50px;\n  height: 28px;\n}\n.toggle__left, .toggle__right{\n  margin: 5px;\n  transition: all 100ms ease-in;\n}\n.toggle__left{\n  background: #B1CECE;\n  border-radius: 15px 0 0 15px;\n  flex-grow: 1;\n}\n.toggle__right{\n  background: #939393;\n  border-radius: 0 15px 15px 0;\n  flex-grow: 5;\n}\n.toggle__center{\n  position: absolute;\n  left: 0;\n  background: #F1F1F1;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);\n  transition: left 100ms ease-in;\n}\n.toggle__center:active{\n  transition: box-shadow 150ms linear;\n  box-shadow: 0 0 0 19px rgba(80, 80, 80, 0.1);\n}\n.toggle--checked .toggle__left{\n  flex-grow: 5;\n}\n.toggle--checked .toggle__right{\n  flex-grow: 1;\n}\n.toggle--checked .toggle__center{\n  background: #009688;\n  box-shadow: 0 0 0 0 rgba(0, 150, 136, 0.2), 0 1px 3px 1px rgba(0, 0, 0, 0.4);\n  left: 25px;\n}\n.toggle--checked .toggle__center:active{\n  box-shadow: 0 0 0 19px rgba(0, 150, 136, 0.2);\n}\n", ""]);
 
 	// exports
 
