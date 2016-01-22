@@ -5,15 +5,16 @@
   height: 28px;
 }
 .toggle__left, .toggle__right{
-  margin: 5px;
   transition: all 100ms ease-in;
 }
 .toggle__left{
+  margin: 5px 0 5px 5px;
   background: #B1CECE;
   border-radius: 15px 0 0 15px;
   flex-grow: 1;
 }
 .toggle__right{
+  margin: 5px 5px 5px 0;
   background: #939393;
   border-radius: 0 15px 15px 0;
   flex-grow: 5;
@@ -21,12 +22,13 @@
 .toggle__center{
   position: absolute;
   left: 0;
+  transform: translate3d(0, 0, 0);
   background: #F1F1F1;
   width: 28px;
   height: 28px;
   border-radius: 50%;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
-  transition: left 100ms ease-in;
+  transition: transform 100ms ease-in;
 }
 .toggle__center:active{
   transition: box-shadow 150ms linear;
@@ -41,7 +43,7 @@
 .toggle--checked .toggle__center{
   background: #009688;
   box-shadow: 0 0 0 0 rgba(0, 150, 136, 0.2), 0 1px 3px 1px rgba(0, 0, 0, 0.4);
-  left: 25px;
+  transform: translate3d(25px, 0, 0);
 }
 .toggle--checked .toggle__center:active{
   box-shadow: 0 0 0 19px rgba(0, 150, 136, 0.2);
